@@ -2,10 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageComponent } from './page/page.component';
 import { DialogComponent } from './dialog/dialog.component';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatButtonModule } from '@angular/material/button';
-
-
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
@@ -14,8 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
   ],
   imports: [
     CommonModule,
-    MatDialogModule,
-    MatButtonModule,
+    MaterialModule
   ]
 })
 export class FeatureModule { }

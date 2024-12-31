@@ -1,5 +1,5 @@
 import { Component, TemplateRef } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog } from '../../material/material.module';
 import { LazyDialogComponent } from '../lazy-dialog/lazy-dialog.component';
 
 @Component({
