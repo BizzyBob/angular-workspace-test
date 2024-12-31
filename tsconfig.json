@@ -4,7 +4,7 @@
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "paths": {
-      "@app/material": ["./src/app/material/material.module.ts"]
+      "@app/material": ["./projects/shell/src/app/material/material.module.ts"]
     },
     "strict": true,
     "noImplicitOverride": true,
