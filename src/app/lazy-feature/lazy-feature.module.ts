@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LazyPageComponent } from './lazy-page/lazy-page.component';
 import { LazyDialogComponent } from './lazy-dialog/lazy-dialog.component';
 import { RouterModule } from '@angular/router';
-import { MaterialModule } from '../material/material.module';
+import { MaterialModule } from '@app/material';
 
 const routes = [
   { path: '', component: LazyPageComponent }

@@ -1,5 +1,5 @@
 import { Component, TemplateRef } from '@angular/core';
-import { MatDialog } from '../../material/material.module';
+import { MatDialog } from '@app/material';
 import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FeatureModule } from './feature/feature.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { MaterialModule } from './material/material.module';
+import { MaterialModule } from '@app/material';
 
 @NgModule({
   declarations: [
