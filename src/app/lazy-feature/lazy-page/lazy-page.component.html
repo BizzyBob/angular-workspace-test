@@ -1,1 +1,15 @@
-<p>lazy-page works!</p>
+<p> Lazy Feature </p>
+
+<button (click)="showFromTemplate(confirmDialog)" mat-flat-button color="secondary"> Template </button>
+<button (click)="showFromComponent()" mat-flat-button color="secondary"> Component </button>
+
+<ng-template #confirmDialog>
+  <h1 mat-dialog-title>Please Confirm (LAZY)</h1>
+  <div mat-dialog-content>
+    <p>Are you really sure?</p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-flat-button [mat-dialog-close]="false"> No </button>
+    <button mat-flat-button color="secondary" [mat-dialog-close]="true" cdkFocusInitial> Yes </button>
+  </div>
+</ng-template>

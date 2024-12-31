@@ -1,3 +1,11 @@
+mat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 4px;
+    background-color: gray;
+}
+
 nav {
     display: flex;
     gap: 20px;
@@ -18,6 +26,5 @@ nav {
 
 .active {
     font-weight: bold;
-    color: #f00;
     border: 1px solid black;
 }

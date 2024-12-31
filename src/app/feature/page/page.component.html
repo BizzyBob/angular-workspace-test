@@ -1,1 +1,15 @@
-<p>page works!</p>
+<p> Feature </p>
+
+<button (click)="showFromTemplate(dialogTemplate)" mat-flat-button color="primary"> Template </button>
+<button (click)="showFromComponent()" mat-flat-button color="primary"> Component </button>
+
+<ng-template #dialogTemplate>
+  <h1 mat-dialog-title>Please Confirm </h1>
+  <div mat-dialog-content>
+    <p>Are you really sure?</p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-flat-button [mat-dialog-close]="false"> No </button>
+    <button mat-flat-button color="primary" [mat-dialog-close]="true" cdkFocusInitial> Yes </button>
+  </div>
+</ng-template>

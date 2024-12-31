@@ -1,6 +1,21 @@
-<nav>
-  <a routerLink="/feature" routerLinkActive="active"> Feature </a>
-  <a routerLink="/lazy-feature" routerLinkActive="active"> Lazy Feature </a>
-</nav>
+<mat-card>
 
-<router-outlet />
+  <mat-card-header>
+    <mat-card-title> Testing out Mat Dialog </mat-card-title>
+    <mat-card-subtitle> When launched from different contexts </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <nav>
+      <a routerLink="/feature" routerLinkActive="active"> Feature </a>
+      <a routerLink="/lazy-feature" routerLinkActive="active"> Lazy Feature </a>
+    </nav>
+  </mat-card-content>
+  
+  <mat-divider />
+
+  <mat-card-actions>
+    <router-outlet />
+  </mat-card-actions>
+  
+</mat-card>
