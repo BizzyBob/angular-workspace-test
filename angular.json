@@ -22,11 +22,10 @@
 			"prefix": "app",
 			"architect": {
 				"build": {
-					"builder": "@angular-devkit/build-angular:application",
+					"builder": "ngx-build-plus:browser",
 					"options": {
 						"outputPath": "dist/shell",
 						"index": "projects/shell/src/index.html",
-						"browser": "projects/shell/src/main.ts",
 						"polyfills": [
 							"zone.js"
 						],
@@ -40,7 +39,10 @@
 							"@angular/material/prebuilt-themes/purple-green.css",
 							"projects/shell/src/styles.scss"
 						],
-						"scripts": []
+						"scripts": [],
+						"main": "projects/shell/src/main.ts",
+						"extraWebpackConfig": "projects/shell/webpack.config.js",
+						"commonChunk": false
 					},
 					"configurations": {
 						"production": {
@@ -56,24 +58,29 @@
 									"maximumError": "4kb"
 								}
 							],
-							"outputHashing": "all"
+							"outputHashing": "all",
+							"extraWebpackConfig": "projects/shell/webpack.prod.config.js"
 						},
 						"development": {
 							"optimization": false,
 							"extractLicenses": false,
+							"namedChunks": true,
 							"sourceMap": true
 						}
 					},
 					"defaultConfiguration": "production"
 				},
 				"serve": {
-					"builder": "@angular-devkit/build-angular:dev-server",
+					"builder": "ngx-build-plus:dev-server",
 					"options": {
-						"port": 3333
+						"port": 3333,
+						"publicHost": "http://localhost:3333",
+						"extraWebpackConfig": "projects/shell/webpack.config.js"
 					},
 					"configurations": {
 						"production": {
-							"buildTarget": "shell:build:production"
+							"buildTarget": "shell:build:production",
+							"extraWebpackConfig": "projects/shell/webpack.prod.config.js"
 						},
 						"development": {
 							"buildTarget": "shell:build:development"
@@ -82,9 +89,10 @@
 					"defaultConfiguration": "development"
 				},
 				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n",
+					"builder": "ngx-build-plus:extract-i18n",
 					"options": {
-						"buildTarget": "shell:build"
+						"buildTarget": "shell:build",
+						"extraWebpackConfig": "projects/shell/webpack.config.js"
 					}
 				},
 				"test": {
@@ -128,11 +136,10 @@
 			"prefix": "app",
 			"architect": {
 				"build": {
-					"builder": "@angular-devkit/build-angular:application",
+					"builder": "ngx-build-plus:browser",
 					"options": {
 						"outputPath": "dist/foo",
 						"index": "projects/foo/src/index.html",
-						"browser": "projects/foo/src/main.ts",
 						"polyfills": [
 							"zone.js"
 						],
@@ -146,7 +153,10 @@
 							"@angular/material/prebuilt-themes/purple-green.css",
 							"projects/foo/src/styles.scss"
 						],
-						"scripts": []
+						"scripts": [],
+						"main": "projects/foo/src/main.ts",
+						"extraWebpackConfig": "projects/foo/webpack.config.js",
+						"commonChunk": false
 					},
 					"configurations": {
 						"production": {
@@ -162,24 +172,29 @@
 									"maximumError": "4kb"
 								}
 							],
-							"outputHashing": "all"
+							"outputHashing": "all",
+							"extraWebpackConfig": "projects/foo/webpack.prod.config.js"
 						},
 						"development": {
 							"optimization": false,
 							"extractLicenses": false,
+							"namedChunks": true,
 							"sourceMap": true
 						}
 					},
 					"defaultConfiguration": "production"
 				},
 				"serve": {
-					"builder": "@angular-devkit/build-angular:dev-server",
+					"builder": "ngx-build-plus:dev-server",
 					"options": {
-						"port": 3001
+						"port": 3001,
+						"publicHost": "http://localhost:3001",
+						"extraWebpackConfig": "projects/foo/webpack.config.js"
 					},
 					"configurations": {
 						"production": {
-							"buildTarget": "foo:build:production"
+							"buildTarget": "foo:build:production",
+							"extraWebpackConfig": "projects/foo/webpack.prod.config.js"
 						},
 						"development": {
 							"buildTarget": "foo:build:development"
@@ -188,9 +203,10 @@
 					"defaultConfiguration": "development"
 				},
 				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n",
+					"builder": "ngx-build-plus:extract-i18n",
 					"options": {
-						"buildTarget": "foo:build"
+						"buildTarget": "foo:build",
+						"extraWebpackConfig": "projects/foo/webpack.config.js"
 					}
 				},
 				"test": {

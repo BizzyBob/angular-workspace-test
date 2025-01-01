@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FederatedDialogComponent } from './federated-dialog/federated-dialog.component';
+import { MaterialModule } from '@app/material';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FederatedDialogComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
