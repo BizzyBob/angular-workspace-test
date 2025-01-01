@@ -42,6 +42,7 @@
 						"scripts": [],
 						"main": "projects/shell/src/main.ts",
 						"extraWebpackConfig": "projects/shell/webpack.config.js",
+						"namedChunks": true,
 						"commonChunk": false
 					},
 					"configurations": {
@@ -64,7 +65,6 @@
 						"development": {
 							"optimization": false,
 							"extractLicenses": false,
-							"namedChunks": true,
 							"sourceMap": true
 						}
 					},
@@ -156,6 +156,7 @@
 						"scripts": [],
 						"main": "projects/foo/src/main.ts",
 						"extraWebpackConfig": "projects/foo/webpack.config.js",
+						"namedChunks": true,
 						"commonChunk": false
 					},
 					"configurations": {
@@ -178,7 +179,6 @@
 						"development": {
 							"optimization": false,
 							"extractLicenses": false,
-							"namedChunks": true,
 							"sourceMap": true
 						}
 					},
